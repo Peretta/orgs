@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    >
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".ui.activity.FormularioProdutoActivity">
+
+        <EditText
+            android:id="@+id/produto_item_nome"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="nome"
+            android:inputType="text"
+            android:layout_margin="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+        <EditText
+            android:id="@+id/descricao"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="descrição"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="@id/produto_item_nome"
+            app:layout_constraintStart_toStartOf="@id/produto_item_nome"
+            app:layout_constraintTop_toBottomOf="@id/produto_item_nome"
+            />
+
+        <EditText
+            android:id="@+id/valor"
+            android:layout_width="0dp"
+            android:hint="valor"
+            android:inputType="numberDecimal"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@id/produto_item_nome"
+            app:layout_constraintStart_toStartOf="@id/produto_item_nome"
+            app:layout_constraintTop_toBottomOf="@id/descricao"
+            />
+
+        <Button
+            android:id="@+id/botao_salvar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:text="Salvar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/valor"
+            app:layout_constraintVertical_bias="1" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
